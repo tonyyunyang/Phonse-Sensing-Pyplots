@@ -37,7 +37,7 @@ from scipy.io import wavfile
 import matplotlib.pyplot as plt
 
 # set the path to the recording file
-filename = "On-site Test 1/C4/20230511_172739.pcm"
+filename = "On-site Test 1/20230511_182815_testing.pcm"
 
 # define the sampling rate and window size for the spectrogram
 sr = 44100
