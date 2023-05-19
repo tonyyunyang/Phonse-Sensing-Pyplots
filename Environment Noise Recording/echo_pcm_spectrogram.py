@@ -37,19 +37,46 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Read the .pcm file
-with open('On-site Test 1/C1/20230511_172509.pcm', 'rb') as f:
+with open('Test/20230519_105305.pcm', 'rb') as f:
     pcm_data = f.read()
 
 # Convert the raw PCM data to a NumPy array
 data = np.frombuffer(pcm_data, dtype='int16')
+for element in data:
+        print(element)
 
 # Set up audio recording parameters
 sample_rate = 44100
 
 # Plot the spectrogram
-plt.specgram(data, Fs=sample_rate, cmap='jet', vmin=-60, vmax=20)
+plt.specgram(data, Fs=sample_rate, cmap='jet',  vmin=-60, vmax=60)
 plt.xlabel('Time [sec]')
-plt.ylim([15000, 20000])
+# plt.ylim([12000, 12500])
+plt.ylabel('Frequency [Hz]')
+plt.title('Spectrogram of PCM file')
+plt.colorbar()
+plt.show()
+
+
+
+
+
+# Read the .pcm file
+with open('Test/20230519_105305_processed.pcm', 'rb') as f:
+    pcm_data = f.read()
+
+# Convert the raw PCM data to a NumPy array
+data = np.frombuffer(pcm_data, dtype='int16')
+for element in data:
+        print(element)
+
+# Set up audio recording parameters
+sample_rate = 44100
+
+# Plot the spectrogram
+plt.specgram(data, Fs=sample_rate, cmap='jet',  vmin=-60, vmax=60)
+plt.xlabel('Time [sec]')
+plt.ylim([12000, 13000])
 plt.ylabel('Frequency [Hz]')
 plt.title('Spectrogram of PCM file')
 plt.colorbar()
