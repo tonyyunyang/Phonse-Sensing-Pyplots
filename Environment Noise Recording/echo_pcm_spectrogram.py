@@ -37,7 +37,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Read the .pcm file
-with open('Test/20230519_105305.pcm', 'rb') as f:
+with open('20230530_233611.pcm', 'rb') as f:
     pcm_data = f.read()
 
 # Convert the raw PCM data to a NumPy array
@@ -62,7 +62,7 @@ plt.show()
 
 
 # Read the .pcm file
-with open('Test/20230519_105305_processed.pcm', 'rb') as f:
+with open('20230530_233611_processed.pcm', 'rb') as f:
     pcm_data = f.read()
 
 # Convert the raw PCM data to a NumPy array
